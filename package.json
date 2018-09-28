@@ -1,0 +1,37 @@
+{
+  "name": "Survival-Network-Chatbot",
+  "description": "a Cognitive Chatbot that uses different conversational AI technologies to provide support to affected residents and  automatically answer questions posed by people in natural human language. By combining several cognitive capabilities such as natural language.",
+  "version": "0.1.1",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test-integration": "casperjs test ./test/integration/test.*.js",
+    "test-integration-runner": "NODE_ENV=test node casper-runner.js",
+    "test": "npm run lint && npm run test-integration-runner",
+    "test-unit": "jest test/unit --coverage",
+    "lint": "eslint .",
+    "autofix": "eslint --fix .",
+    "codecov": "npm run test && (codecov || true)"
+  },
+  
+  "license": "Apache-2.0",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "npm": "^6.4.1",
+	"request":"^2.88.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.6",
+    "casperjs": "^1.1.4",
+    "codecov": "^3.0.4",
+    "eslint": "^5.1.0",
+    "jest": "^23.4.1",
+    "phantomjs-prebuilt": "^2.1.16",
+    "supertest": "^3.1.0"
+  }
+}
